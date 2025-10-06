@@ -1,4 +1,4 @@
-FROM postgres:12-alpine
+FROM postgres:18.0-alpine
 
 
 ARG POSTGRES_HOST
