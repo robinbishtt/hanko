@@ -17,7 +17,7 @@ RUN npm ci --silent
 COPY . .
 RUN npm run build:elements:dev
 
-FROM nginx:stable-alpine
+FROM nginx:1.29.1-alpine3.22-slim
 COPY --from=build /app/elements/dist/elements.js /usr/share/nginx/html
 COPY --from=build /app/frontend-sdk/dist/sdk.* /usr/share/nginx/html
 
